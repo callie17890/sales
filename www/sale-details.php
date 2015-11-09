@@ -36,13 +36,15 @@ if($mysql_link->error) throw new \Exception($mysql_link->error);
     <a href="/">Manage Products</a> | 
     <a href="new-sale.php">Create Sale</a> |
     <a href="sales.php">View Sales</a>
-    <h1>Sale Created At</h1>
+  
+    <h1>Sale Created At <?=$_GET['id']?> </h1>
+
     <table>
       <tr>
-        <th style="padding-right: 15px;">Name</th>
-        <th style="padding-right: 15px;">Quantity</th>
-        <th style="padding-right: 15px;">Price</th>
-        <th style="padding-right: 15px;">Total</th>
+        <th style="padding-right: 15px;">Name:</th>
+        <th style="padding-right: 15px;">Quantity:</th>
+        <th style="padding-right: 15px;">Price:</th>
+        <th style="padding-right: 15px;">Total:</th>
       </tr>
       <?php foreach ($users as $user) { 
         if($user['quantity']*$user['price'] != '0') {
@@ -55,7 +57,7 @@ if($mysql_link->error) throw new \Exception($mysql_link->error);
       </tr>
       <?php } }?>
       <tr>
-        <th style="padding-top: 50px;">Grand Total</th>
+        <th style="padding-top: 50px;">Grand Total:</th>
         <td></td>
         <td></td>
         <td style="padding-top: 50px;">$<?=$_GET['total']?> </td>

@@ -16,6 +16,7 @@ $users = $mysql_link->query( "
     sale_product
   ON
     sale.id = sale_product.sale_id
+    ORDER BY sale.created_at DESC
   ");
 
 $results = array();

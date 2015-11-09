@@ -43,8 +43,8 @@ if($mysql_link->error) throw new \Exception($mysql_link->error);
 
     <table>
       <tr>
-        <th style="padding-right: 80px;">Name</th>
-        <th style="padding-right: 60px;">Unit Price</th>
+        <th style="padding-right: 80px;">Name:</th>
+        <th style="padding-right: 60px;">Unit Price:</th>
         <th></th>
       </tr>
       <?php foreach($users as $user){ ?>
@@ -60,11 +60,11 @@ if($mysql_link->error) throw new \Exception($mysql_link->error);
     <br>
     <a href="new-product.php">[+] Create New Product</a>
 
-    <h2 style="margin-top: 100px;">Inactive Products</h2>
+    <h2 style="margin-top: 100px;">Inactive Products:</h2>
     <table>
       <tr>
-        <th style="padding-right: 80px;">Name</th>
-        <th style="padding-right: 60px;">Unit Price</th>
+        <th style="padding-right: 80px;">Name:</th>
+        <th style="padding-right: 60px;">Unit Price:</th>
         <th></th>
       </tr>
       <?php foreach($deactivate as $user){ ?>
